@@ -1,0 +1,64 @@
+.portfolio{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    justify-items: center;
+}
+
+.project-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align items horizontally */
+    position: relative;
+    overflow: hidden;
+}
+
+.projectTitle,
+.projectDescription{
+    text-align: center;
+}
+
+.project-item img{
+    max-width: 60%;
+    height: auto;
+}
+
+.project-title{
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 0.2rem 0px;
+}
+
+.project-decription{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.language-images{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1550px){
+    .portfolio{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 450px){
+    .portfolio{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .language-images {
+        flex-wrap: wrap;
+    }
+}
+
+.language-images img {
+    max-height: 30px; /* Limit the maximum height of the images */
+    margin: 0.5em; /* Add spacing between images */
+}
+  

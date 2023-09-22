@@ -1,0 +1,75 @@
+.Header{
+    position: fixed;
+    width: 16rem;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.MenuToggle{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    z-index: 15;
+}
+
+.MenuToggleButton{
+    color: rgba(0, 0, 0, 0.5);
+    overflow: visible;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background-color 200ms cubic-bezier(0.8,0,0.2,1) 0ms;
+    border-radius: 10%;
+    width: 2rem;
+    height: auto;
+}
+
+.MenuToggleButton img{
+    width: 1em;
+    height: 1em;
+}
+
+.Content{
+    margin-left: 16.3rem;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease; 
+    background-color: rgba(7, 10, 48, 0.745);
+}
+
+.HeaderMenu{
+    transform: translateX(0px) !important;
+    z-index: 20 !important;
+}
+
+.ContentMenuOpen {
+    margin-left: 16.3rem ;
+    width: auto ;
+  }
+
+  @media screen and (max-width: 1200px) {
+
+    .Header {
+      transform: translateX(-100%);
+      z-index: 20;
+    }
+    
+    .MenuToggle .MenuOpen{
+        display: block;
+    }
+  
+    .Content {
+      margin-left: 0;
+      width: 100vw;
+    }
+  
+  }
+
+@media screen and (max-width: 1200px){
+    .MenuToggle{
+        display: block;
+    }
+}
+
+
