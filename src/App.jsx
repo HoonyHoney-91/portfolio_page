@@ -126,11 +126,11 @@ function App() {
         />
       <main className={`Content ${menuOpen ? 'ContentMenuOpen' : ''}`}>
         <Routes>
-          <Route path="/" element={<Contact />} />
+          <Route path="/portfolio_page/" element={<About />} />
           <Route index element={<About />} />
-          <Route path="About" element={<About />} />
-          <Route path="Portfolio" element={<Portfolio />} />
-          <Route path="Contact" element={<Contact />} />
+          <Route path="/portfolio_page/About" element={<About />} />
+          <Route path="/portfolio_page/Portfolio" element={<Portfolio />} />
+          <Route path="/portfolio_page/Contact" element={<Contact />} />
         </Routes>
       </main>
     </BrowserRouter>

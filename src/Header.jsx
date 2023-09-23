@@ -9,16 +9,16 @@ const Header = (prop) =>{
             </div>
             <ul className="navItems">
                 <li>
-                    <Link to="/About" className='menu'>About</Link>
+                    <Link to="/portfolio_page/About" className='menu'>About</Link>
                 </li>
                 <li>
-                    <Link to="/Portfolio" className='menu'>Portfolio</Link>
+                    <Link to="/portfolio_page/Portfolio" className='menu'>Portfolio</Link>
                 </li>
                 {/* <li>
-                    <Link to="/Resume" className='menu'>Resume</Link>
+                    <Link to="/portfolio_page/Resume" className='menu'>Resume</Link>
                 </li> */}
                 <li>
-                    <Link to="/Contact" className='menu'>Contact</Link>
+                    <Link to="/portfolio_page/Contact" className='menu'>Contact</Link>
                 </li>
             </ul>
             <footer>
