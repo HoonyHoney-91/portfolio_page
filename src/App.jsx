@@ -11,6 +11,8 @@ import { loadSlim } from "tsparticles-slim";
 
 import './style/App.css'
 
+import menuToggle from './image/menuToggle.png'
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(window.innerWidth >= 1200);
 
@@ -46,7 +48,7 @@ function App() {
       </div>
       <div className={`MenuToggle ${menuOpen ? 'MenuOpen' : ''}`}>
         <button className="MenuToggleButton" onClick={toggleMenu}>
-          <img src="src/image/menuToggle.png" alt="" />
+          <img src={menuToggle} alt="" />
         </button>
       </div>
 
@@ -126,11 +128,11 @@ function App() {
         />
       <main className={`Content ${menuOpen ? 'ContentMenuOpen' : ''}`}>
         <Routes>
-          <Route path="/portfolio_page/" element={<About />} />
+          <Route path="/" element={<About />} />
           <Route index element={<About />} />
-          <Route path="/portfolio_page/About" element={<About />} />
-          <Route path="/portfolio_page/Portfolio" element={<Portfolio />} />
-          <Route path="/portfolio_page/Contact" element={<Contact />} />
+          <Route path="About" element={<About />} />
+          <Route path="Portfolio" element={<Portfolio />} />
+          <Route path="Contact" element={<Contact />} />
         </Routes>
       </main>
     </BrowserRouter>

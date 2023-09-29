@@ -10,6 +10,10 @@ import flask from './image/flask.png'
 import python from './image/python.png'
 import react from './image/react.png'
 
+import ashePage from './image/ashePage.png'
+import stock from './image/stock.png'
+import mbti from './image/mbti.png'
+
 
 import * as React from 'react';
 import Card from '@mui/material/Card';
@@ -39,7 +43,7 @@ function Portfolio() {
     return (
       <div className="portfolio">
         <Project 
-            img="src/image/ashePage.png"
+            img={ashePage}
             title="Full Stack Web Page for ASHE"
             description=""
             url="https://github.com/HoonyHoney-91/ashe"
@@ -47,7 +51,7 @@ function Portfolio() {
         />
         
         <Project 
-            img="src/image/stock.png" 
+            img={stock} 
             title="Mock Stock Trading Applicaton"
             description=""
             url="https://github.com/HoonyHoney-91/Stock_Page_Project"
@@ -55,7 +59,7 @@ function Portfolio() {
         />
         
         <Project 
-            img="src/image/mbti.png"
+            img={mbti}
             title="MBTI Personality Test" 
             description=""
             url="https://github.com/HoonyHoney-91/mbti"

@@ -1,24 +1,26 @@
 import './style/Header.css'
 import { Link } from 'react-router-dom'
 
+import moving from './image/moving.gif'
+
 const Header = (prop) =>{
     return (
         <div className='SideNav'>
             <div className='logoImage'>
-                <img src="src/image/moving.gif" alt="" />
+                <img src={moving} alt="" />
             </div>
             <ul className="navItems">
                 <li>
-                    <Link to="/portfolio_page/About" className='menu'>About</Link>
+                    <Link to="/About" className='menu'>About</Link>
                 </li>
                 <li>
-                    <Link to="/portfolio_page/Portfolio" className='menu'>Portfolio</Link>
+                    <Link to="/Portfolio" className='menu'>Portfolio</Link>
                 </li>
                 {/* <li>
-                    <Link to="/portfolio_page/Resume" className='menu'>Resume</Link>
+                    <Link to="/Resume" className='menu'>Resume</Link>
                 </li> */}
                 <li>
-                    <Link to="/portfolio_page/Contact" className='menu'>Contact</Link>
+                    <Link to="/Contact" className='menu'>Contact</Link>
                 </li>
             </ul>
             <footer>
