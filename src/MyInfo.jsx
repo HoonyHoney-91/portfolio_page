@@ -7,8 +7,12 @@ import firebase from './image/firebase.png';
 import flask from './image/flask.png';
 import python from './image/python.png';
 import react from './image/react.png';
+import scss from './image/scss.png'
+import nodejs from './image/nodejs.png'
+import mongodb from './image/mongodb.png'
+import aws from './image/aws.png'
 
-export const languages = {
+const languages = {
     html,
     css,
     js,
@@ -17,8 +21,12 @@ export const languages = {
     firebase,
     flask,
     python,
-    react
-};
+    react,
+    scss,
+    nodejs,
+    mongodb,
+    aws
+  };
 
 export const MyInfo = {
     name: "Anthony",

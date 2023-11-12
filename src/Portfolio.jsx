@@ -9,6 +9,11 @@ import firebase from './image/firebase.png'
 import flask from './image/flask.png'
 import python from './image/python.png'
 import react from './image/react.png'
+import scss from './image/scss.png'
+import nodejs from './image/nodejs.png'
+import mongodb from './image/mongodb.png'
+import aws from './image/aws.png'
+import YouTubeClone from './image/YouTubeClone.png'
 
 import ashePage from './image/ashePage.png'
 import stock from './image/stock.png'
@@ -34,7 +39,11 @@ const languages = {
     firebase,
     flask,
     python,
-    react
+    react,
+    scss,
+    nodejs,
+    mongodb,
+    aws
   };
     
 
@@ -42,6 +51,14 @@ function Portfolio() {
 
     return (
       <div className="portfolio">
+        <Project 
+            img={YouTubeClone}
+            title="YouTube Clone"
+            description=""
+            url="https://github.com/HoonyHoney-91/youtube_clone"
+            language= {['html', 'scss', 'js', 'nodejs', 'mongodb', 'aws']}
+        />
+        
         <Project 
             img={ashePage}
             title="Full Stack Web Page for ASHE"
