@@ -12,7 +12,7 @@ import nodejs from './image/nodejs.png'
 import mongodb from './image/mongodb.png'
 import aws from './image/aws.png'
 
-const languages = {
+export const languages = {
     html,
     css,
     js,

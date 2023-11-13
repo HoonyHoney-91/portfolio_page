@@ -7,6 +7,7 @@ import { Info } from "@mui/icons-material";
 import { Box } from "@mui/system";
 import face from "./image/face.jpeg"
 
+const maxLangPerRow = 7; 
 
 function About() {
   const imageWidth = '32px';
@@ -48,19 +49,35 @@ function About() {
                       <EmojiBullet key={index} emoji={bio.emoji} context={bio.context} />
                   ))}
               </Box>
-              <Box 
-                component={'ul'} 
-                display={'flex'}
-                alignItems={'center'}
-              >
-                  {Object.entries(languages).map(([languageName, imageSrc]) => (
-                      <EmojiBullet 
-                        key={languageName} 
-                        emoji={<img src={imageSrc} alt={languageName} style={{ width: imageWidth, height: imageHeight }} />}
-                      />
-                  ))}
-              </Box>
-              <Box display={'flex'} gap={'1.5rem'} justifyContent={'center'} fontSize={{xs: '2rem', md: '2.5rem'}}>
+              <Box  
+              component={'ul'}
+              display={'flex'}
+              flexWrap={'wrap'}  
+              maxWidth={'700px'}
+              alignItems={'center'}
+              justifyContent={'center'}
+            >
+            {Object.entries(languages).map(([languageName, imageSrc], index) => {
+
+              return (
+                <EmojiBullet
+                  key={languageName}
+                  emoji={
+                    <img  
+                      src={imageSrc}
+                      alt={languageName} 
+                      style={{ width: '32px', height: '32px' }}  
+                    />
+                  }
+                  style={{
+                    margin: '1rem',
+                    width: `calc(100% / ${maxLangPerRow})`  
+                  }}
+                />
+              );
+            })}
+            </Box>
+            <Box display={'flex'} gap={'1.5rem'} justifyContent={'center'} fontSize={{xs: '2rem', md: '2.5rem'}}>
                {MyInfo.links.map((link, index) => (
                   <SocialIcon key={index} url={link.url} icon={link.icon} label={link.label} />
                ))}
